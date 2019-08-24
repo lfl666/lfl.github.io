@@ -1,0 +1,1667 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>小米商城 - 小米CC9、小米MIX 3、Redmi K20，小米电视官方网站</title>
+		<link rel="icon" href="//s01.mifile.cn/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="css/index.css" />
+		<script type="text/javascript" language="javascript">
+			//总时间，以分为单位
+			var time = 100;
+			//小时
+			var h = parseInt(time / 60) > 0 ? parseInt(time / 60) : 0;
+			//分
+			var m = time % 60;
+			//秒
+			var s = 60;
+			//开始执行倒计时
+			var timeInterval = setInterval(function() {
+				//如果时、分、秒都为0时将停止当前的倒计时
+				if(h == 0 && m == 0 && s == 0) {
+					clearInterval(timeInterval);
+					return;
+				}
+				//当秒走到0时，再次为60秒
+				else if(s == 0) {
+					s = 60;
+				}
+				else if(s == 60) {
+					//每次当秒走到60秒时，分钟减一
+					m -= 1;
+					//当分等于0时并且小时还多余1个小时的时候进里面看看
+					if(m == 0 && h > 0) {
+						//小时减一
+						h -= 1;
+						//分钟自动默认为60分
+						m = 60;
+						//秒自动默认为60秒
+						s = 60;
+					}
+				}
+				//秒继续跳动，减一
+				s -= 1;
+				//小时赋值
+				document.getElementById('f_hh').innerHTML = "0"+h;
+				//分钟赋值
+				document.getElementById('f_mm').innerHTML = m;
+				//秒赋值
+				document.getElementById('f_ss').innerHTML = s;
+			}, 1000);
+		</script>
+	</head>
+
+	<body>
+		<div class="topHeader">
+			<div class="bigHeader">
+				<div class="leftHeader">
+					<a href="">小米商城</a>
+					<span>|</span>
+					<a href="">MIUI</a>
+					<span>|</span>
+					<a href="">IoT</a>
+					<span>|</span>
+					<a href="">云服务</a>
+					<span>|</span>
+					<a href="">金融</a>
+					<span>|</span>
+					<a href="">有品</a>
+					<span>|</span>
+					<a href="">小爱开放平台</a>
+					<span>|</span>
+					<a href="">企业团购</a>
+					<span>|</span>
+					<a href="">资质证照</a>
+					<span>|</span>
+					<a href="">协议规则</a>
+					<span>|</span>
+					<a href="" class="Upload">下载app
+						<span class="box">
+							<em></em>
+							<img src="img/app.png" alt="" />
+							<span class="span1">小米商城APP</span>
+						</span>
+					</a>
+					<span>|</span>
+					<a href="">Select Region</a>
+				</div>
+				<div class="cart">
+					<div class="mai">购物车中还没有产品，赶紧选购吧！</div>
+					<a href="#">
+						<i class="icon iconfont"></i> 购物车
+						<span class="cartNum">（0）</span>
+					</a>
+				</div>
+				<div class="info">
+					<a href="">登录</a>
+					<span>|</span>
+					<a href="">注册</a>
+					<span>|</span>
+					<a href="" class="message">消息通知</a>
+				</div>
+			</div>
+		</div>
+		<div class="secondHeader">
+			<div class="Pulldown" id="List">
+				<div class="content">
+					<ul>
+						<li class="first">
+							<div class="pic">
+								<a href="">
+									<img src="img/red.jpg" />
+								</a>
+							</div>
+							<div class="desp">小米CC9</div>
+							<p class="price">1799元起</p>
+							<div class="flags">新品</div>
+						</li>
+						<li>
+							<div class="pic">
+								<a href="">
+									<img src="img/red.jpg" />
+								</a>
+							</div>
+							<div class="desp">小米CC9</div>
+							<p class="price">1799元起</p>
+							<div></div>
+						</li>
+						<li>
+							<div class="pic">
+								<a href="">
+									<img src="img/red.jpg" />
+								</a>
+							</div>
+							<div class="desp">小米CC9</div>
+							<p class="price">1799元起</p>
+							<div></div>
+						</li>
+						<li>
+							<div class="pic">
+								<a href="">
+									<img src="img/red.jpg" />
+								</a>
+							</div>
+							<div class="desp">小米CC9</div>
+							<p class="price">1799元起</p>
+							<div></div>
+						</li>
+						<li>
+							<div class="pic">
+								<a href="">
+									<img src="img/red.jpg" />
+								</a>
+							</div>
+							<div class="desp">小米CC9</div>
+							<p class="price">1799元起</p>
+							<div></div>
+						</li>
+						<li>
+							<div class="pic">
+								<a href="">
+									<img src="img/red.jpg" />
+								</a>
+							</div>
+							<div class="desp">小米CC9</div>
+							<p class="price">1799元起</p>
+							<div></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="bHeader">
+				<div class="logo"></div>
+				<div class="nav">
+					<ul class="ul">
+						<li class="blank">
+							<a href=""></a>
+						</li>
+						<li id="chuxian">
+							<a href="">小米手机</a>
+						</li>
+						<li>
+							<a href="">Redmi 红米</a>
+						</li>
+						<li>
+							<a href="">电视</a>
+						</li>
+						<li>
+							<a href="">笔记本</a>
+						</li>
+						<li>
+							<a href="">家电</a>
+						</li>
+						<li>
+							<a href="">路由器</a>
+						</li>
+						<li>
+							<a href="">智能硬件</a>
+						</li>
+						<li>
+							<a href="">服务</a>
+						</li>
+						<li>
+							<a href="">社区</a>
+						</li>
+					</ul>
+				</div>
+				<div class="search">
+					<form action="#" method="post">
+						<input type="search" name="" id="" value="" class="text" />
+						<a href=""><i class="icon iconfont1"></i></a>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="banner">
+			<div class="leftNav">
+				<ul class="category-list">
+					<li class="category-item">
+						<a class="title" href="#">手机 电话卡</a><i class="icon iconfont2"></i>
+						<div class="child">
+							<ul class="col1">
+								<li>
+									<a href="">
+										<img src="img/3.png" />
+										<span class="text">小米9c</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="img/2.png" />
+										<span class="text">小米9c</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="img/3(1).png" />
+										<span class="text">小米9c</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="img/80-80-new.png" />
+										<span class="text">小米9c</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="img/80x80.png" />
+										<span class="text">小米9c</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="img/_80.png" />
+										<span class="text">小米9c</span>
+									</a>
+								</li>
+							</ul>
+							<ul class="col1">
+								<li>
+									<a href="">
+										<img src="img/3.png" />
+										<span class="text">小米9c</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="img/2.png" />
+										<span class="text">小米9c</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="img/3(1).png" />
+										<span class="text">小米9c</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="img/80-80-new.png" />
+										<span class="text">小米9c</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="img/80x80.png" />
+										<span class="text">小米9c</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="img/_80.png" />
+										<span class="text">小米9c</span>
+									</a>
+								</li>
+							</ul>
+							<ul class="col1">
+								<li>
+									<a href="">
+										<img src="img/3.png" />
+										<span class="text">小米9c</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="img/2.png" />
+										<span class="text">小米9c</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="img/3(1).png" />
+										<span class="text">小米9c</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="img/80-80-new.png" />
+										<span class="text">小米9c</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="img/80x80.png" />
+										<span class="text">小米9c</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="img/_80.png" />
+										<span class="text">小米9c</span>
+									</a>
+								</li>
+							</ul>
+							<ul class="col1">
+								<li>
+									<a href="">
+										<img src="img/3.png" />
+										<span class="text">小米9c</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="img/2.png" />
+										<span class="text">小米9c</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="img/3(1).png" />
+										<span class="text">小米9c</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="img/80-80-new.png" />
+										<span class="text">小米9c</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="img/80x80.png" />
+										<span class="text">小米9c</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="img/_80.png" />
+										<span class="text">小米9c</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="category-item">
+						<a class="title" href="#">电视 盒子</a><i class="icon iconfont2"></i></li>
+					<li class="category-item">
+						<a class="title" href="#">笔记本 平板</a><i class="icon iconfont2"></i></li>
+					<li class="category-item">
+						<a class="title" href="#">家电 插线板</a><i class="icon iconfont2"></i></li>
+					<li class="category-item">
+						<a class="title" href="#">出行 穿戴</a><i class="icon iconfont2"></i></li>
+					<li class="category-item">
+						<a class="title" href="#">智能 路由器</a><i class="icon iconfont2"></i></li>
+					<li class="category-item">
+						<a class="title" href="#">电源 配件</a><i class="icon iconfont2"></i></li>
+					<li class="category-item">
+						<a class="title" href="#">健康 儿童</a><i class="icon iconfont2"></i></li>
+					<li class="category-item">
+						<a class="title" href="#">耳机 音响</a><i class="icon iconfont2"></i></li>
+					<li class="category-item">
+						<a class="title" href="#">生活 箱包</a><i class="icon iconfont2"></i></li>
+			</div>
+			<div class="back"></div>
+			<div class="prev">
+				<a href="#"><i class="icon iconfont3">&#xe60b;</i></a>
+			</div>
+			<div class="next">
+				<a href="#"><i class="icon iconfont3">&#xe609;</i></a>
+			</div>
+			<div class="ball">
+				<ul>
+					<li class="li1"></li>
+					<li class="li2"></li>
+					<li class="li3"></li>
+					<li class="li4"></li>
+					<li class="li5"></li>
+				</ul>
+				</ul>
+			</div>
+		</div>
+		<div class="bannerBtn">
+			<div class="channel-box">
+				<ul class="channel-list">
+					<li class="channel-item">
+						<a href="#">
+							<i class="icon iconfont4">&#xe611;</i> 小米秒杀
+						</a>
+					</li>
+					<li class="channel-item">
+						<a href="#">
+							<i class="icon iconfont4">&#xe667;</i> 企业团购
+						</a>
+					</li>
+					<li class="channel-item">
+						<a href="#">
+							<i class="icon iconfont4">&#xe60e;</i> F码通道
+						</a>
+					</li>
+					<li class="channel-item">
+						<a href="#">
+							<i class="icon iconfont4">&#xe610;</i> 米粉卡
+						</a>
+					</li>
+					<li class="channel-item">
+						<a href="#">
+							<i class="icon iconfont4">&#xe603;</i> 以旧换新
+						</a>
+					</li>
+					<li class="channel-item">
+						<a href="#">
+							<i class="icon iconfont4">&#xe661;</i> 话费充值
+						</a>
+					</li>
+
+				</ul>
+			</div>
+			<ul class="hot-good-list">
+				<li class="good-item">
+					<a href="#"><img src="img/read4.jpg" /></a>
+				</li>
+				<li class="good-item" style="margin-left: 15px;">
+					<a href="#"><img src="img/xiaomi3.jpg" /></a>
+				</li>
+				<li class="good-item" style="margin-left: 15px;">
+					<a href="#"><img src="img/xiaomishouhuan.jpg" /></a>
+				</li>
+			</ul>
+		</div>
+		<div class="model model-star-goods">
+			<div class="title-box">
+				<h2 class="title">小米闪购</h2>
+				<div class="more">
+					<a href="#">
+						<i class="icon iconfont5 btn-prev">&#xe65c;</i>
+					</a>
+					<a href="#">
+						<i class="icon iconfont5 btn-next">&#xe602;</i>
+					</a>
+				</div>
+			</div>
+			<div class="slid-warp">
+				<ul class="star-goods-list" style="width:1226px;">
+					<li class="star-item-1">
+						<div class="time-title J_falshRound" style="font-size: 21px;color: red;padding-top:15px ;">14:00 场</div>
+						<img src="//i1.mifile.cn/f/i/2018/mihome/flashpurchase.png" style="width: 34px; height: 53px;margin: 25px 0;">
+						<div class="sub J_falshDesc" style="color: rgba(0,0,0,0.54);font-size: 15px;">距离结束还有</div>
+						<div class="countdown clearfix J_falshTime" style="width: 168px;
+    margin: 28px auto 0;">
+							<div class="box" id="f_hh">04</div>
+							<div class="dosh">:</div>
+							<div class="box" id="f_mm">08</div>
+							<div class="dosh">:</div>
+							<div class="box" id="f_ss">01</div>
+						</div>
+					</li>
+					<li class="star-item-2">
+						<a class="thumb" href="#">
+							<img src="https://i8.mifile.cn/a1/pms_1554108362.70322107.jpg" />
+						</a>
+						<h3 class="title">
+              <a href="#">米家互联网空调C1（一级能效）</a>
+            </h3>
+						<p class="desc">1.5匹，自清洁，全直流变频</p>
+						<p class="price">1299元起</p>
+					</li>
+					<li class="star-item-3">
+						<a class="thumb" href="#">
+							<img src="img/2.jpg" />
+						</a>
+						<h3 class="title">
+              <a href="#">米家互联网空调（一级能效） 1G</a>
+            </h3>
+						<p class="desc">1.5匹，全直流变频</p>
+						<p class="price">1299元起</p>
+					</li>
+					<li class="star-item-4">
+						<a class="thumb" href="#">
+							<img src="img/3.jpg" />
+						</a>
+						<h3 class="title">
+              <a href="#">米家空调</a>
+            </h3>
+						<p class="desc">大1匹，静音，快速制冷热</p>
+						<p class="price">1299元起</p>
+					</li>
+					<li class="star-item-5">
+						<a class="thumb" href="#">
+							<img src="img/4.jpg" />
+						</a>
+						<h3 class="title">
+              <a href="#">Redmi全自动波轮洗衣机 1A 8kg 白色</a>
+            </h3>
+						<p class="desc">大容量一次洗净全家衣物</p>
+						<p class="price">1299元起</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="firstImg" style="margin: 0 auto; width: 1226px;">
+			<img src="img/reand7Pro.jpg" style="border: 0;width: 1226px;" />
+		</div>
+		<div class="main">
+			<div class="container">
+				<div class="model">
+					<div class="title-box clearfix">
+						<h2 class="title">手机</h2>
+						<div class="more-links">
+							<a href="#" style="color: #424242">
+								查看全部
+								<i class="icon iconfont6">&#xe6cb;</i>
+							</a>
+						</div>
+					</div>
+					<div class="light-list hasone">
+						<div class="light-item">
+							<a href="#">
+								<img src="img/mi.jpg" />
+							</a>
+						</div>
+					</div>
+					<ul class="product-list">
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1550642182.7527088!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">小米9 6GB+128GB</a></h3>
+							<p class="desc">骁龙855，索尼4800万超广角微距三摄</p>
+							<p class="price">
+								<span class="num">2799元</span>元
+							</p>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1550642182.7527088!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">小米9 6GB+128GB</a></h3>
+							<p class="desc">骁龙855，索尼4800万超广角微距三摄</p>
+							<p class="price">
+								<span class="num">2799元</span>元
+							</p>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1550642182.7527088!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">小米9 6GB+128GB</a></h3>
+							<p class="desc">骁龙855，索尼4800万超广角微距三摄</p>
+							<p class="price">
+								<span class="num">2799元</span>元
+							</p>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1550642182.7527088!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">小米9 6GB+128GB</a></h3>
+							<p class="desc">骁龙855，索尼4800万超广角微距三摄</p>
+							<p class="price">
+								<span class="num">2799元</span>元
+							</p>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1550642182.7527088!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">小米9 6GB+128GB</a></h3>
+							<p class="desc">骁龙855，索尼4800万超广角微距三摄</p>
+							<p class="price">
+								<span class="num">2799元</span>元
+							</p>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1550642182.7527088!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">小米9 6GB+128GB</a></h3>
+							<p class="desc">骁龙855，索尼4800万超广角微距三摄</p>
+							<p class="price">
+								<span class="num">2799元</span>元
+							</p>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1550642182.7527088!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">小米9 6GB+128GB</a></h3>
+							<p class="desc">骁龙855，索尼4800万超广角微距三摄</p>
+							<p class="price">
+								<span class="num">2799元</span>元
+							</p>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1550642182.7527088!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">小米9 6GB+128GB</a></h3>
+							<p class="desc">骁龙855，索尼4800万超广角微距三摄</p>
+							<p class="price">
+								<span class="num">2799元</span>元
+							</p>
+						</li>
+					</ul>
+					<img src="img/xmad_15646511961894_pxAMm.jpg" style="border: 0;width: 1226px;margin: 28px 0 22px 0;" />
+				</div>
+				<div class="model product-2">
+					<div class="title-box">
+						<h2 class="title">家电</h2>
+						<div class="more">
+							<ul class="tab-list clearfix" id="tab-list">
+								<li class="tab-active">
+									<a href="#">热门</a>
+								</li>
+								<li>
+									<a href="#">电视影音</a>
+								</li>
+								<li>
+									<a href="#">电脑</a>
+								</li>
+								<li>
+									<a href="#">家具</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="light-list">
+						<div class="light-item">
+							<a href="#"><img src="img/xmad_15407945157088_LSvuj.jpg" /></a>
+						</div>
+						<div class="light-item">
+							<a href="#"><img src="img/xmad_15608266614476_wdGNy.jpg" /></a>
+						</div>
+					</div>
+					<ul class="product-list clearfix">
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item  brick-item-s">
+							<a href="#">
+								<img src="img/pms_1490756071.3088664!220x220.png" width="80px" height="80px" />
+								<h3 class="title">Yeelight LED 吸顶灯</h3>
+							</a>
+							<p class="price"><span>379</span>元</p>
+						</li>
+						<li class="brick-item  brick-item-s">
+							<div class="btn-more">
+								<a href="#"><i class="icon iconfont7">&#xe608;</i></a>
+							</div>
+							<a href="#" class="readmore">浏览更多
+								<small>热门</small>
+							</a>
+						</li>
+					</ul>
+					<img src="img/xmad_15644892049074_PLpcm.jpg" style="border: 0;width: 1226px;margin: 28px 0 22px 0;" />
+				</div>
+				<div class="model product-2">
+					<div class="title-box">
+						<h2 class="title">智能</h2>
+						<div class="more">
+							<ul class="tab-list clearfix" id="tab-list">
+								<li class="tab-active">
+									<a href="#">热门</a>
+								</li>
+								<li>
+									<a href="#">出行</a>
+								</li>
+								<li>
+									<a href="#">健康</a>
+								</li>
+								<li>
+									<a href="#">酷玩</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="light-list">
+						<div class="light-item">
+							<a href="#"><img src="img/xmad_15616291664006_XWeFG.jpg" /></a>
+						</div>
+						<div class="light-item">
+							<a href="#"><img src="img/xmad_15501975795809_qmOCe.jpg" /></a>
+						</div>
+					</div>
+					<ul class="product-list clearfix">
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于 黑色小米 的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item  brick-item-s">
+							<a href="#">
+								<img src="img/pms_1490756071.3088664!220x220.png" width="80px" height="80px" />
+								<h3 class="title">Yeelight LED 吸顶灯</h3>
+							</a>
+							<p class="price"><span>379</span>元</p>
+						</li>
+						<li class="brick-item  brick-item-s">
+							<div class="btn-more">
+								<a href="#"><i class="icon iconfont7">&#xe608;</i></a>
+							</div>
+							<a href="#" class="readmore">浏览更多
+								<small>热门</small>
+							</a>
+						</li>
+					</ul>
+					<img src="img/xmad_15646583074795_HuOjV.jpg" style="border: 0;width: 1226px;margin: 28px 0 22px 0;" />
+				</div>
+				<div class="model product-2">
+					<div class="title-box">
+						<h2 class="title">搭配</h2>
+						<div class="more">
+							<ul class="tab-list clearfix" id="tab-list">
+								<li class="tab-active">
+									<a href="#">热门</a>
+								</li>
+								<li>
+									<a href="#">耳机音箱</a>
+								</li>
+								<li>
+									<a href="#">电源</a>
+								</li>
+								<li>
+									<a href="#">电池充电器</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="light-list">
+						<div class="light-item">
+							<a href="#"><img src="img/xmad_14950995035103_fhWtH.jpg" /></a>
+						</div>
+						<div class="light-item">
+							<a href="#"><img src="img/xmad_15407949632827_qkVda.jpg" /></a>
+						</div>
+					</div>
+					<ul class="product-list clearfix">
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于 黑色小米 的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item  brick-item-s">
+							<a href="#">
+								<img src="img/pms_1490756071.3088664!220x220.png" width="80px" height="80px" />
+								<h3 class="title">Yeelight LED 吸顶灯</h3>
+							</a>
+							<p class="price"><span>379</span>元</p>
+						</li>
+						<li class="brick-item  brick-item-s">
+							<div class="btn-more">
+								<a href="#"><i class="icon iconfont7">&#xe608;</i></a>
+							</div>
+							<a href="#" class="readmore">浏览更多
+								<small>热门</small>
+							</a>
+						</li>
+					</ul>
+					<img src="img/mik.jpg" style="border: 0;width: 1226px;margin: 28px 0 22px 0;" />
+				</div>
+				<div class="model product-2">
+					<div class="title-box">
+						<h2 class="title">配件</h2>
+						<div class="more">
+							<ul class="tab-list clearfix" id="tab-list">
+								<li class="tab-active">
+									<a href="#">热门</a>
+								</li>
+								<li>
+									<a href="#">保护套</a>
+								</li>
+								<li>
+									<a href="#">贴膜</a>
+								</li>
+								<li>
+									<a href="#">其他配件</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="light-list">
+						<div class="light-item">
+							<a href="#"><img src="img/xmad_15438026207445_MFOpC.jpg" /></a>
+						</div>
+						<div class="light-item">
+							<a href="#"><img src="img/xmad_15399144078801_opBVT.jpg" /></a>
+						</div>
+					</div>
+					<ul class="product-list clearfix">
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于 黑色小米 的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item  brick-item-s">
+							<a href="#">
+								<img src="img/pms_1490756071.3088664!220x220.png" width="80px" height="80px" />
+								<h3 class="title">Yeelight LED 吸顶灯</h3>
+							</a>
+							<p class="price"><span>379</span>元</p>
+						</li>
+						<li class="brick-item  brick-item-s">
+							<div class="btn-more">
+								<a href="#"><i class="icon iconfont7">&#xe608;</i></a>
+							</div>
+							<a href="#" class="readmore">浏览更多
+								<small>热门</small>
+							</a>
+						</li>
+					</ul>
+					<img src="img/xmad_15613709054033_Hbsyl.jpg" style="border: 0;width: 1226px;margin: 28px 0 22px 0;" />
+				</div>
+				<div class="model product-2">
+					<div class="title-box">
+						<h2 class="title">周边</h2>
+						<div class="more">
+							<ul class="tab-list clearfix" id="tab-list">
+								<li class="tab-active">
+									<a href="#">热门</a>
+								</li>
+								<li>
+									<a href="#">出行</a>
+								</li>
+								<li>
+									<a href="#">居家</a>
+								</li>
+								<li>
+									<a href="#">生活周边</a>
+								</li>
+								<li>
+									<a href="#">箱包</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="light-list">
+						<div class="light-item">
+							<a href="#"><img src="img/xmad_15580597376541_PWtXK.jpg" /></a>
+						</div>
+						<div class="light-item">
+							<a href="#"><img src="img/xmad_15543886716825_hjrKl.jpg" /></a>
+						</div>
+					</div>
+					<ul class="product-list clearfix">
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于 黑色小米 的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item">
+							<a class="thumb" href="#"><img src="img/pms_1465366178.11466342!220x220.jpg" /></a>
+							<h3 class="title"><a href="#">米家恒温水壶</a></h3>
+							<p class="desc">水温智能控制，304 不锈钢内胆</p>
+							<p class="price">
+								<span class="num">179</span>元
+							</p>
+							<div class="review-wrapper">
+								<a href="#">
+									<span class="review">
+                比我以前买的小米充电宝砖头好太多了！放在包里不占位置...
+                </span>
+									<span class="author">来自于龚毅祥的评价</span>
+								</a>
+							</div>
+						</li>
+						<li class="brick-item  brick-item-s">
+							<a href="#">
+								<img src="img/pms_1490756071.3088664!220x220.png" width="80px" height="80px" />
+								<h3 class="title">Yeelight LED 吸顶灯</h3>
+							</a>
+							<p class="price"><span>379</span>元</p>
+						</li>
+						<li class="brick-item  brick-item-s">
+							<div class="btn-more">
+								<a href="#"><i class="icon iconfont7">&#xe608;</i></a>
+							</div>
+							<a href="#" class="readmore">浏览更多
+								<small>热门</small>
+							</a>
+						</li>
+					</ul>
+					<img src="img/xmad_15627554640413_IzfaO.jpg" style="border: 0;width: 1226px;margin: 28px 0 22px 0;" />
+				</div>
+				<div class="model product-3 model-recommend">
+					<div class="title-box clearfix">
+						<h2 class="title">为你推荐</h2>
+						<div class="more">
+							<a href="#">
+								<i class="icon iconfont5 btn-prev">&#xe65c;</i>
+							</a>
+							<a href="#">
+								<i class="icon iconfont5 btn-next">&#xe602;</i>
+							</a>
+						</div>
+					</div>
+					<div class="slid-warp">
+						<ul class="recommend-list" style="width:2048px;">
+							<li>
+								<a class="thumb" href="#">
+									<img src="img/pms_1564108339.22967443!140x140.jpg" />
+								</a>
+								<h3 class="title">
+                <a href="#">小米手机4</a>
+              </h3>
+								<p class="price">1299元起</p>
+								<p class="tips"> 13.5万人好评 </p>
+							</li>
+							<li>
+								<a class="thumb" href="#">
+									<img src="img/pms_1558857753.92246453!140x140.jpg" />
+								</a>
+								<h3 class="title">
+                <a href="#">小米平板</a>
+              </h3>
+								<p class="price">1299元起</p>
+								<p class="tips"> 13.5万人好评 </p>
+							</li>
+							<li>
+								<a class="thumb" href="#">
+									<img src="img/pms_1558857753.92246453!140x140.jpg" />
+								</a>
+								<h3 class="title">
+                <a href="#">小米盒子增强版 1G</a>
+              </h3>
+								<p class="price">1299元起</p>
+								<p class="tips"> 13.5万人好评 </p>
+							</li>
+							<li>
+								<a class="thumb" href="#">
+									<img src="img/pms_1558857753.92246453!140x140.jpg" />
+								</a>
+								<h3 class="title">
+                <a href="#">全新小米路由器</a>
+              </h3>
+								<p class="price">1299元起</p>
+								<p class="tips"> 13.5万人好评 </p>
+							</li>
+							<li>
+								<a class="thumb" href="#">
+									<img src="img/pms_1558857753.92246453!140x140.jpg" />
+								</a>
+								<h3 class="title">
+                <a href="#">小米路由器mini</a>
+              </h3>
+								<p class="price">1299元起</p>
+								<p class="tips"> 13.5万人好评 </p>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="site-footer">
+			<div class="footer-box">
+				<div class="container footer-box-container">
+					<div class="footer-serive">
+						<ul class="serive-list">
+							<li>
+								<a href="javascript#">
+									<i class="icon iconfont9">&#xe715;</i> 1小时快修服务
+								</a>
+							</li>
+							<li>
+								<a href="javascript#">
+									<i class="icon iconfont9">&#xe64c;</i> 7天无理由退货
+								</a>
+							</li>
+							<li>
+								<a href="javascript#">
+									<i class="icon iconfont9">&#xe606;</i> 15天免费换货
+								</a>
+							</li>
+							<li>
+								<a href="javascript#">
+									<i class="icon iconfont9">&#xe667;</i> 满150元包邮
+								</a>
+							</li>
+							<li>
+								<a href="javascript#">
+									<i class="icon iconfont9">&#xe601;</i> 520余家售后网点
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-links clearfix">
+						<dl class="col-links">
+							<dt>帮助中心</dt>
+							<dd>
+								<a href="javascript#">账户管理</a>
+							</dd>
+							<dd>
+								<a href="javascript#">购物指南</a>
+							</dd>
+							<dd>
+								<a href="javascript#">订单操作</a>
+							</dd>
+						</dl>
+						<dl class="col-links">
+							<dt>服务支持</dt>
+							<dd>
+								<a href="javascript#">售后政策</a>
+							</dd>
+							<dd>
+								<a href="javascript#">自助服务</a>
+							</dd>
+							<dd>
+								<a href="javascript#">相关下载</a>
+							</dd>
+						</dl>
+						<dl class="col-links">
+							<dt>小米之家</dt>
+							<dd>
+								<a href="javascript#">小米之家</a>
+							</dd>
+							<dd>
+								<a href="javascript#">服务网点</a>
+							</dd>
+							<dd>
+								<a href="javascript#">授权体验店</a>
+							</dd>
+						</dl>
+						<dl class="col-links">
+							<dt>关于小米</dt>
+							<dd>
+								<a href="javascript#">了解小米</a>
+							</dd>
+							<dd>
+								<a href="javascript#">加入小米</a>
+							</dd>
+							<dd>
+								<a href="javascript#">投资者关系</a>
+							</dd>
+						</dl>
+						<dl class="col-links">
+							<dt>关注我们</dt>
+							<dd>
+								<a href="javascript#">新浪微博</a>
+							</dd>
+							<dd>
+								<a href="javascript#">联系我们</a>
+							</dd>
+							<dd>
+								<a href="javascript#">官方微信</a>
+							</dd>
+						</dl>
+						<dl class="col-links">
+							<dt>特色服务</dt>
+							<dd>
+								<a href="javascript#">F码通道</a>
+							</dd>
+							<dd>
+								<a href="javascript#">礼物码</a>
+							</dd>
+							<dd>
+								<a href="javascript#">防伪查询</a>
+							</dd>
+						</dl>
+						<div class="col-contact">
+							<p class="phone">400-100-5678</p>
+							<p class="time">周一至周日 8:00-18:00<br>（仅收市话费）</p>
+							<a href="javascript#" class="btn-gm">
+								<i class="icon iconfont10">&#xe9e2;</i> 人工服务
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="site-info container">
+				<div class="container clearfix">
+					<div class="ll">
+						<div class="logo">
+							<img src="img/logo-footer.png" width="57px" height="57px" />
+						</div>
+						<div class="info-text">
+							<p>
+								<a href="javascript#">小米网</a>
+								<span class="sep">|</span>
+								<a href="javascript#">MIUI</a>
+								<span class="sep">|</span>
+								<a href="javascript#">米聊</a>
+								<span class="sep">|</span>
+								<a href="javascript#">多看书城</a>
+								<span class="sep">|</span>
+								<a href="javascript#">小米路由器</a>
+								<span class="sep">|</span>
+								<a href="javascript#">小米后院</a>
+								<span class="sep">|</span>
+								<a href="javascript#">小米天猫店</a>
+								<span class="sep">|</span>
+								<a href="javascript#">小米淘宝直营店</a>
+								<span class="sep">|</span>
+								<a href="javascript#">小米网盟</a>
+								<span class="sep">|</span>
+								<a href="javascript#">问题反馈</a>
+								<span class="sep">|</span>
+								<a href="javascript#">Select region</a>
+							</p>
+
+							<p>© mi.com 京ICP证110507号 京ICP备10046444号 京公网安备11010802020134号 京网文[2017]1530-131号 </p>
+							<p>（京）网械平台备字（2018）第00005号 互联网药品信息服务资格证 (京) -非经营性-2014-0090 营业执照 医疗器械公告 </p>
+							<p>增值电信业务许可证 网络食品经营备案（京）【2018】WLSPJYBAHF-12 食品经营许可证 </p>
+							<p>违法和不良信息举报电话：171-5104-4404 知识产权侵权投诉 本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</p>
+						</div>
+					</div>
+					<div class="footerImg">
+						<ul>
+							<li>
+								<a href=""><img src="img/truste.png" width="83px" height="28px" /></a>
+							</li>
+							<li>
+								<a href=""><img src="img/v-logo-1.png" /></a>
+							</li>
+							<li>
+								<a href=""><img src="img/v-logo-2.png" /></a>
+							</li>
+							<li>
+								<a href=""><img src="img/v-logo-3.png" /></a>
+							</li>
+							<li>
+								<a href=""><img src="img/ba10428a4f9495ac310fd0b5e0cf8370.png" /></a>
+							</li>
+						</ul>
+					</div>
+					<div class="slogan">探索黑科技，小米为发烧而生</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/1.js"></script>
+	</body>
+
+</html>
